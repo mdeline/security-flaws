@@ -3,6 +3,9 @@ package fi.mdeline.securityflaws.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity(name = "User")
+@Table(name = "user")
+
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
