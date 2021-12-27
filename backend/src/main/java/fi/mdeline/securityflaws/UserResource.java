@@ -5,11 +5,11 @@ import fi.mdeline.securityflaws.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin("*") // security flaw
 public class UserResource {
     public final UserService userService;
 
