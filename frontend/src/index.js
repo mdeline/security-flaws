@@ -1,6 +1,7 @@
 import App from './App';
 import Subscribe from './components/Subscribe';
-import Users from './components/Users';
+import Admin from './components/Admin';
+import Home from './components/Home';
 import { render } from "react-dom";
 import {
   BrowserRouter,
@@ -12,8 +13,9 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+        <Route path="home" element={<Home />} />
         <Route path="subscribe" element={<Subscribe />} />
-        <Route path="users" element={<Users />} />
+        <Route path="admin" element={<Admin />} />
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -88,11 +88,13 @@ alter default privileges in schema securityflaws grant insert, delete, update on
 
 /* Create Tables */
 
-create table securityflaws.user
+create table securityflaws.subscriber
 (
     id serial not null,
     name varchar(50) not null,
-    password varchar(50) not null,
-    constraint user_pk primary key (id),
-    unique(name)
+    email varchar(50) not null,
+    constraint user_pk primary key (id)
 );
+
+/* Populate subscriber */
+insert into securityflaws.user(name, email) values('Naomi Nagata', 'chief.engineer@tycho.com');

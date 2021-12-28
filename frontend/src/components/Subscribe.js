@@ -6,7 +6,7 @@ function Subscribe() {
   const onSubmit = handleSubmit(data => console.log(data));
   return (
     <div>
-    <h2>Please Subscribe</h2>
+    <h2>Subscribe to our newsletter</h2>
     <form onSubmit={onSubmit}>
       <label>Name</label> <br />
       <input type="text" {...register("name", { required: true})} /> <br />
