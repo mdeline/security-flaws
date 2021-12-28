@@ -97,4 +97,6 @@ create table securityflaws.subscriber
 );
 
 /* Populate subscriber */
-insert into securityflaws.user(name, email) values('Naomi Nagata', 'chief.engineer@tycho.com');
+insert into securityflaws.subscriber(name, email) values('Naomi Nagata', 'chief.engineer@tycho.com');
+insert into securityflaws.subscriber(name, email) values('Amos Burton', 'amos@rocinante.spac');
+insert into securityflaws.subscriber(name, email) values('Roberta Draper', 'bobbie@mars.com');
