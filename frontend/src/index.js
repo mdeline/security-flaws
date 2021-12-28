@@ -1,5 +1,5 @@
 import App from './App';
-import Register from './components/Register';
+import Subscribe from './components/Subscribe';
 import Users from './components/Users';
 import { render } from "react-dom";
 import {
@@ -12,7 +12,7 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="register" element={<Register />} />
+        <Route path="subscribe" element={<Subscribe />} />
         <Route path="users" element={<Users />} />
       </Route>
     </Routes>

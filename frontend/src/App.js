@@ -10,10 +10,9 @@ function App() {
         style={{
           borderBottom: "solid 1px",
           paddingBottom: "1rem"
-        }}
-      >
+        }}>
         <Link to="/">Home</Link> | {" "}
-        <Link to="/register">Register</Link> | {" "}
+        <Link to="/subscribe">Subscribe</Link> | {" "}
         <Link to="/users">Users</Link>
       </nav>
       <Outlet />
