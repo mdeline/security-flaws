@@ -24,7 +24,7 @@ app.get('/subscribers/all', async (req, res) => {
 })
 
 /*
-    insert the following line on the email-field to test SQL injection:
+    insert the following line on the 'Subscribe' page's email field to test SQL injection:
     email'); update securityflaws.subscriber set name = 'You Have Been Hacked' where id = 1; --
 */
 app.post('/subscribers/add', async (req, res) => {
@@ -32,7 +32,6 @@ app.post('/subscribers/add', async (req, res) => {
     await pool.query(`INSERT INTO securityflaws.subscriber (name, email) VALUES ('${name}', '${email}')`)
     res.status(201)
 })
-
 
 app.listen(port, () => {
     console.log(`API listening to http://localhost:${port}`)
