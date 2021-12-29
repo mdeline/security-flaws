@@ -43,7 +43,7 @@ create role db_manager with
     nocreatedb
     nocreaterole
     noreplication
-;
+    password 'manager';
 
 -- Application user
 create role db_appuser with
@@ -62,10 +62,12 @@ grant db_reader, db_writer to db_manager, db_appuser;
 create database securityflawsprod
     with owner = db_manager
     encoding = 'UTF8'
-    lc_collate = 'en_US.UTF-8'
-    lc_ctype = 'en_US.UTF-8'
+    lc_collate = 'en_US.utf8'
+    lc_ctype = 'en_US.utf8'
     tablespace = pg_default
     connection limit = -1;
+
+\c securityflawsprod
 
 grant connect on database securityflawsprod to db_connect;
 grant all on database securityflawsprod to db_manager;

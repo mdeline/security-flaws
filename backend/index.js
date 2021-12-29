@@ -12,7 +12,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'securityflawsprod',
     password: 'manager',
-    port: 5432,
+    port: 4321,
 })
 
 app.use(bodyParser.json())
