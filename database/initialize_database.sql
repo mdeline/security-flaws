@@ -55,10 +55,6 @@ create role db_appuser with
     noreplication
 ;
 
--- Passwords
-alter user db_manager password 'manager';
-alter user db_appuser password 'appuser';
-
 -- Database manager & application user can read and write the databse
 grant db_reader, db_writer to db_manager, db_appuser;
 
